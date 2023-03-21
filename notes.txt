@@ -1,0 +1,38 @@
+npm init -y
+npm i express knex pg
+npm i -D nodemon
+
+touch index.js
+
+mkdir routes
+touch routes/index.js
+
+
+mkdir db
+touch db/db.js
+
+npx knex init
+move the knexfile.js into your db folder
+
+mkdir migrations
+npx knex migrate:make init --migrations-directory db/migrations
+
+RUNS LAST MIGRATION. SIMILAR TO DB:MIGRATE
+npx knex migrate:latest --knexfile db/knexfile.js
+
+
+ mkdir controller
+ mkdir service
+ mkdir dao
+
+
+
+ #################
+npm i express knex nodemon pg
+
+cd db
+npk knex init
+npx knex migrate:make create_user
+
+cd db
+npx knex migrate:latest --migrations-directory db/migrations
